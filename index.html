@@ -5,44 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Richway Tailors</title>
 
-    <!-- TailwindCSS CDN (REQUIRED) -->
+    <!-- Load Tailwind FIRST -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Inter Font -->
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Custom Styles -->
+    <!-- Your custom stylesheet -->
     <link rel="stylesheet" href="index.css" />
 
     <style>
       body { font-family: 'Inter', sans-serif; }
-
-      @media print {
-        @page { margin: 0; }
-        body { -webkit-print-color-adjust: exact; }
-      }
-
-      .thermal-print-container {
-        width: 80mm;
-        padding-right: 5px;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 12px;
-        display: none;
-      }
-
-      @media print {
-        .no-print { display: none !important; }
-        .thermal-print-active .thermal-print-container { display: block; width: auto; max-width: 80mm; white-space: pre-wrap; }
-        .thermal-print-active .normal-print-container { display: none; }
-        body:not(.thermal-print-active) .normal-print-container { display: block; width: 100%; max-width: 210mm; }
-      }
     </style>
   </head>
 
   <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
 
-  
+    <!-- React bundle should load LAST -->
     <script type="module" src="assets/index-BLgN_Tnq.js"></script>
   </body>
 </html>
