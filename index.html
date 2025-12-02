@@ -4,70 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Richway Tailors</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-      }
+      body { font-family: 'Inter', sans-serif; }
+
       @media print {
         @page { margin: 0; }
         body { -webkit-print-color-adjust: exact; }
-        /* When printing, hide the React App root content unless it's the print modal */
-        /* Note: We rely on the print:hidden class in App.tsx mainly */
       }
-      /* Thermal Print Specifics */
+
       .thermal-print-container {
         width: 80mm;
-        padding-right: 5px; /* Margin for error */
+        padding-right: 5px;
         font-family: 'Courier New', Courier, monospace;
         font-size: 12px;
         display: none;
       }
+
       @media print {
         .no-print { display: none !important; }
-        
-        /* Thermal Mode */
-        .thermal-print-active .thermal-print-container { 
-            display: block; 
-            width: auto; 
-            max-width: 80mm; 
-            white-space: pre-wrap; 
-        }
-        .thermal-print-active .normal-print-container { 
-            display: none; 
-        }
-
-        /* Standard Mode */
-        /* If thermal class is NOT present, we show the normal print container */
-        body:not(.thermal-print-active) .normal-print-container {
-            display: block;
-            width: 100%;
-            max-width: 210mm; /* A4 width */
-        }
-        body:not(.thermal-print-active) .thermal-print-container {
-            display: none;
-        }
+        .thermal-print-active .thermal-print-container { display: block; width: auto; max-width: 80mm; white-space: pre-wrap; }
+        .thermal-print-active .normal-print-container { display: none; }
+        body:not(.thermal-print-active) .normal-print-container { display: block; width: 100%; max-width: 210mm; }
       }
     </style>
 
-<link rel="stylesheet" href="/index.css">
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
-  }
-}
-</script>
-  <script type="module" crossorigin src="assets/index-BLgN_Tnq.js"></script>
-</head>
+    <link rel="stylesheet" href="index.css">
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+        "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+        "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
+      }
+    }
+    </script>
+
+    <script type="module" crossorigin src="assets/index-BLgN_Tnq.js"></script>
+  </head>
+
   <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
-</body>
+  </body>
 </html>
